@@ -10,6 +10,7 @@ import { PaymentsComponent } from './payments/payments.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 import { AddPeopleComponent } from './add-people/add-people.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ServerDataService } from './server-data.service';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 		AppRoutingModule,
 		AlertModule.forRoot(),
   ],
-  providers: [],
+  providers: [ServerDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

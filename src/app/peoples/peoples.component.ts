@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { ServerDataService } from '../server-data.service';
 
 @Component({
-  selector: 'app-peoples',
-  templateUrl: './peoples.component.html',
-  styleUrls: ['./peoples.component.css']
+	selector: 'app-peoples',
+	templateUrl: './peoples.component.html',
+	styleUrls: ['./peoples.component.css']
 })
 export class PeoplesComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+	constructor(private ServerDataService: ServerDataService) { }
+	peoples = [];
+	ngOnInit() {
+		this.getPeoples();
+	}
+	getPeoples(): void {
+		this.peoples = this.ServerDataService.getPeoples();
+	}
 }
