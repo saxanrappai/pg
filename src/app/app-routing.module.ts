@@ -9,7 +9,7 @@ import { AddPeopleComponent } from './add-people/add-people.component';
 const routes: Routes = [
   { path: '', component: PeoplesComponent },
   { path: 'peoples', component: PeoplesComponent },
-  { path: 'people-details', component: PeopleDetailsComponent },
+  { path: 'people-details/:id', component: PeopleDetailsComponent },
   { path: 'payments', component: PaymentsComponent },
   { path: 'payment-details', component: PaymentDetailsComponent },
   { path: 'add-people', component: AddPeopleComponent },

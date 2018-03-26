@@ -11,24 +11,26 @@ import { PaymentDetailsComponent } from './payment-details/payment-details.compo
 import { AddPeopleComponent } from './add-people/add-people.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ServerDataService } from './server-data.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PeoplesComponent,
-    PeopleDetailsComponent,
-    PaymentsComponent,
-    PaymentDetailsComponent,
-    AddPeopleComponent,
-    NavigationComponent
-  ],
-  imports: [
-    BrowserModule,
+	declarations: [
+		AppComponent,
+		PeoplesComponent,
+		PeopleDetailsComponent,
+		PaymentsComponent,
+		PaymentDetailsComponent,
+		AddPeopleComponent,
+		NavigationComponent
+	],
+	imports: [
+		BrowserModule,
 		AppRoutingModule,
 		AlertModule.forRoot(),
-  ],
-  providers: [ServerDataService],
-  bootstrap: [AppComponent]
+		FormsModule,
+	],
+	providers: [ServerDataService],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
